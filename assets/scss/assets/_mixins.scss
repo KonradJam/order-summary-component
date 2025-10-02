@@ -1,0 +1,6 @@
+@mixin text-preset($tp, $weight: 400) {
+    font-size: map-get($tp, size);
+    line-height: map-get($tp, lh);
+    letter-spacing: map-get($tp, ls);
+    font-weight: $weight;
+}
