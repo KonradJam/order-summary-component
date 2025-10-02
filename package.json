@@ -1,0 +1,16 @@
+{
+  "name": "order-summary-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Order summary card coding challenge](preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch --update --no-source-map assets/scss:assets/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
