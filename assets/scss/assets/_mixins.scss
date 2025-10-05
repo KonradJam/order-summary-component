@@ -1,6 +1,17 @@
-@mixin text-preset($tp, $weight: 400) {
+@use "sass:map";
+@use "variables" as *;
+
+@mixin text-preset($number, $weight: 400) {
+
+    $tp: map-get($text-preset, $number);
     font-size: map-get($tp, size);
     line-height: map-get($tp, lh);
     letter-spacing: map-get($tp, ls);
     font-weight: $weight;
+}
+
+@mixin flex-col($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
 }

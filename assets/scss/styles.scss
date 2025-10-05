@@ -1,3 +1,96 @@
 @use "assets/reset";
 @use "assets/variables" as *;
 @use "assets/mixins" as *;
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 100vw;
+    block-size: 100vh;
+    background-color: $color-blue-100;
+    padding: $spacing-300;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.card {
+    background-color: $color-white;
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-300;
+        padding: $spacing-300 $spacing-400 $spacing-300 $spacing-300;
+    }
+
+    &__text {
+        @include flex-col($spacing-200);
+    }
+
+    &__title {
+        @include text-preset(2, 900);
+        color: $color-blue-950;
+        text-align: center;
+    }
+
+    &__desc {
+        @include text-preset(4, 500);
+        color: $color-gray-600;
+        text-align: center;
+    }
+
+    &__plan {
+        display: flex;
+        align-items: center;
+        background-color: $color-blue-50;
+        border-radius: .6875rem;
+        padding: $spacing-200;
+    }
+
+    &__icon {
+        margin-inline-end: $spacing-200;
+    }
+
+    &__spec {
+        margin-inline-end: auto;
+    }
+
+    &__name {
+        @include text-preset(4, 900);
+        color: $color-blue-950;
+    }
+
+    &__price {
+        @include text-preset(4, 500);
+        color: $color-gray-600;
+    }
+
+    &__change {
+        border: none;
+        background-color: transparent;
+        @include text-preset(4, 800);
+        color: $color-blue-700;
+    }
+
+    &__order {
+        @include flex-col($spacing-300);
+    }
+
+    &__proceed {
+        @include text-preset(4, 900);
+        color: $color-white;
+        background-color: $color-blue-700;
+        border: none;
+        border-radius: .6875rem;
+        padding: .7813rem;
+    }
+
+    &__cancel {
+        @include text-preset(4, 900);
+        color: $color-gray-600;
+        border: none;
+        background-color: transparent;
+    }
+}
