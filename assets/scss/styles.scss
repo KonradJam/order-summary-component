@@ -8,15 +8,27 @@ body {
     justify-content: center;
     inline-size: 100vw;
     block-size: 100vh;
-    background-color: $color-blue-100;
     padding: $spacing-300;
     font-family: "Red Hat Display", sans-serif;
+    
+    background: $color-blue-100 url("../images/pattern-background-mobile.svg") top center/130% no-repeat;
+    @media (min-width: 90rem) {
+        background:  $color-blue-100  url("../images/pattern-background-desktop.svg") top center/100% no-repeat;
+    }
 }
 
 .card {
+    max-inline-size: 28.125rem;
+    max-block-size: 43.5625rem;
     background-color: $color-white;
     border-radius: 1.25rem;
     overflow: hidden;
+    box-shadow: 0px 40px 30px -20px rgba(13, 48 ,189 , .15);
+
+    &__hero {
+        inline-size: 100%;
+        block-size: auto;
+    }
 
     &__content {
         display: flex;
@@ -72,6 +84,13 @@ body {
         background-color: transparent;
         @include text-preset(4, 800);
         color: $color-blue-700;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    &__change:hover, &__change:focus {
+        color: $color-purple-500;
+        outline: none;
     }
 
     &__order {
@@ -85,6 +104,14 @@ body {
         border: none;
         border-radius: .6875rem;
         padding: .7813rem;
+        box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, .19);
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    &__proceed:hover, &__pro    ceed:focus {
+        background-color: $color-purple-500;
+        outline: none;
     }
 
     &__cancel {
@@ -92,5 +119,12 @@ body {
         color: $color-gray-600;
         border: none;
         background-color: transparent;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    &__cancel:hover, &__cancel:focus {
+        color: $color-blue-950;
+        outline: none;
     }
 }
