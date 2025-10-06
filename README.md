@@ -20,7 +20,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Links
 
-Live Site URL: [GitHub Pages]()
+Live Site URL: [GitHub Pages](https://konradjam.github.io/order-summary-component/)
 
 ## My process
 
@@ -32,7 +32,7 @@ Live Site URL: [GitHub Pages]()
 - Flexbox
 - RWD
 - Sass
-- CUBE CSS
+- BEM
 - Accessibility
 
 ## Author
